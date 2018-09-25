@@ -1,0 +1,57 @@
+
+.main{
+    height:100%;
+    background-image: url("https://www.brnkl.io/wp-content/themes/enfold/images/background-images/polygon.png");
+    font-family: 'Montserrat', sans-serif;
+}
+.main_row{
+    height: 100%;
+}
+
+/*Vessel Col*/
+.vessel_info {
+    text-align: center;
+    height: 100%;
+}
+.vessel_item img{
+    display: inline-block;
+    width: 10%;
+    margin-right: 7px;
+}
+
+/*Payment Col*/
+.payment {
+    text-align: center;
+}
+
+.payment button{
+    margin: 20px;
+    width: 50%;
+}
+
+
+
+
+/* Payment Form */
+.StripeElement {
+    background-color: white;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
