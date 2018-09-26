@@ -6,7 +6,8 @@
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <script src="https://js.stripe.com/v3/"></script>
-<script src="stripe-form.js"></script>
+
+
 
 
 
@@ -16,7 +17,7 @@
   <div class = 'row main_row'>
     <!--Vessel Information is Displayed in This Column-->
     <div class="col-3 vessel_info border-right">
-      <h3 class = 'center'>Vessel</h3>
+      <h3 class = 'center'>Account</h3>
       <div class = 'vessel_info'>
           <ul class = 'list-group'>
               <li class = 'list-group-item vessel_item'><img src='assets/user.svg' class = 'img-responsive'> {{ user_name }}</li>
@@ -28,14 +29,55 @@
     </div>
     <!--Payment Info is Displayed in This Column-->
     <div class="col payment">
-      <h1 class = 'h1-center'>Payment Form</h1>
-    
- 
+      <h1 class = 'h1-center'>Subscription</h1>
 
+      <div class='container-fluid payment_form'>
 
-
-
-    
+        <form>
+          <div class="form-group">
+              <label for="cardNumber">CARD NUMBER</label>
+              <div class="input-group">
+                  <input type="text" class="form-control" name="cardNumber" placeholder="Valid Card Number" required autofocus />
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xs-7 col-md-7">
+                  <div class="form-group">
+                      <label>EXPIRY DATE</label>
+                    <div class='row'>
+                      <div class="col">
+                          <input type="text" class="form-control inline" name='expMonth' placeholder="MM" required />
+                      </div>
+                      <div class="col">
+                          <input type="text" class="form-control inline" name = "expYear" placeholder="YY" required />
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-xs-5 col-md-5 pull-right">
+                  <div class="form-group">
+                      <label for="cvCode">
+                          CV CODE</label>
+                      <input type="password" class="form-control" name="cvc" placeholder="CV" required />
+                  </div>
+              </div>
+          </div>
+          <button (click)="chargeCreditCard()" class = 'btn btn-primary btn-block'>Purchase</button>
+        </form>
+        <div class="row btn_row">
+          <div class="col">
+              <button (click)="chargeCreditCard()" class = 'btn btn-primary btn-block btn-success'>Renew</button>
+          </div>
+          <div class="col">
+              <button (click)="chargeCreditCard()" class = 'btn btn-primary btn-block btn-warning'>Pause</button>
+          </div>
+          <div class="col">
+              <button (click)="chargeCreditCard()" class = 'btn btn-primary btn-block btn-danger'>Cancel</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
