@@ -3,7 +3,8 @@ brnkl Client Payment Page
 
 ## to run:
 ~cd brnkl-payment
-npm start 
+
+~npm start 
 
 by default web app runs on http://localhost:4200
 
